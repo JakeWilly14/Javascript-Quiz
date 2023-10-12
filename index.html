@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Code Quiz</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <nav>View Highscores</nav>
+
+  <div class="header-card">
+    <h1>
+      Coding Quiz Challenge
+    </h1>
+    <p>
+      Info about quiz
+    </p>
+    <div>
+      <button id="start-btn">
+        Start
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="quiz">
+      <h1 id="question"></h1>
+      <div id="answer-btn">
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <h1>
+      All Done!
+    </h1>
+    <div>
+      Score:<span id="user-score"> 0</span></div>
+    <div>
+      <label for="initials"></label>
+      <textarea name="initials-container" id="user-initials"></textarea>
+    </div>
+  </div>
+
+  <div class="highscore-container">
+    <div>
+      <textarea  
+      readonly 
+      id="highscores"
+      placeholder="Highscores">
+      </textarea>
+      <div>
+        <button class="back-btn">
+          Go Back
+        </button>
+        <button class="reset-btn">
+          Clear Highscores
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+  
+</body>
+</html>
