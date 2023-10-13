@@ -1,4 +1,5 @@
 var startButton = document.getElementById('start-btn');
+// listed question in array to add to HTML after start //
 var questions = [
   {
     question: "Which is appropriate syntax for the Javascript function:",
@@ -47,12 +48,14 @@ var questions = [
   },
 ]
 
+// targets question and answer elements in HTML //
 var questionEl = document.getElementById("question");
 var answerButton = document.getElementById("answer-btn");
 
 var currentQuestionIndex = 0;
 var score = 0;
 
+// sets timer with new score, also calling on first question //
 function startQuiz() {
   console.log('started')
   currentQuestionIndex = 0;
@@ -61,8 +64,13 @@ function startQuiz() {
   showQuestion();
 }
 
+// shows question in random order from array //
 function showQuestion() {
- var currentQuestion = questions['']
+  var currentQuestion = questions[Math.floor(Math.random()*questions.length)]
+  var questionNumber = currentQuestionIndex + 1;
+    // inputs randomized question in question element in HTML //
+    questionEl.innerHTML = questionNumber + ". " + currentQuestion.question;
 }
+
 
 startButton.addEventListener("click", startQuiz);

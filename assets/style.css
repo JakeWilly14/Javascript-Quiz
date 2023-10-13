@@ -5,15 +5,53 @@
   box-sizing: border-box;
 }
 
-.header-card, .container, .input-container, .highscore-container {
-  display: block;
-  min-width: 240px;
-  max-width: 768px;
+body {
+  display: flex;
   width: 100%;
   /* This is to make sure that the container height is always the same size as the browser. */
   min-height: 100px;
   height: 100%;
-  margin: 0 auto;
-  top: 50%;
+  margin: auto;
   text-align: center;
+}
+
+.header-card h1 {
+  margin: 200px 0 75px;
+  font-size: 48px;
+}
+
+.header-card p {
+  margin: 0 20px 50px;
+  line-height: 20px;
+}
+
+#start-btn {
+  width: 125px;
+  height: 35px;
+  background-color: rgb(109, 4, 109);
+  color: white;
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  transform: scale(1.05);
+  border: 1px solid rgb(0, 204, 255);
+}
+
+#question {
+  margin: 200px 0 75px;
+  font-size: 32px;
+}
+
+#answer-btn .btn {
+  margin: 5px;
+  background-color: rgb(109, 4, 109);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
