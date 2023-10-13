@@ -4,3 +4,16 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
+.header-card, .container, .input-container, .highscore-container {
+  display: block;
+  min-width: 240px;
+  max-width: 768px;
+  width: 100%;
+  /* This is to make sure that the container height is always the same size as the browser. */
+  min-height: 100px;
+  height: 100%;
+  margin: 0 auto;
+  top: 50%;
+  text-align: center;
+}
