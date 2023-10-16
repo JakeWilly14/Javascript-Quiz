@@ -11,61 +11,75 @@
 
   <nav>View Highscores</nav>
 
-  <div class="header-card">
-    <h1>
-      Coding Quiz Challenge
-    </h1>
-    <p>
-      Info about quiz
-    </p>
-    <div>
-      <button id="start-btn">
-        Start
-      </button>
-    </div>
+  <div>
+    <span id ="timer">60</span>
   </div>
 
-  <div class="container">
-    <div class="quiz">
-      <h1 id="question"></h1>
-      <div id="answer-btn">
-        <button class="btn"></button>
-        <button class="btn"></button>
-        <button class="btn"></button>
-        <button class="btn"></button>
-      </div>
-    </div>
-  </div>
+  <main>
 
-  <div class="input-container">
-    <h1>
-      All Done!
-    </h1>
-    <div>
-      Score:<span id="user-score"> 0</span></div>
-    <div>
-      <label for="initials"></label>
-      <textarea name="initials-container" id="user-initials"></textarea>
-    </div>
-  </div>
-
-  <div class="highscore-container">
-    <div>
-      <textarea  
-      readonly 
-      id="highscores"
-      placeholder="Highscores">
-      </textarea>
+    <div class="header-card" id="header-start">
+      <h1>
+        Coding Quiz Challenge
+      </h1>
+      <p>
+        A timed quiz over Javascript fundamentals. 
+        You will have "time" to answer 5 questions. 
+        If the time reaches 0 before you comeplete the quiz, it is Game Over.
+        For every incorrect answer time will be deducted from the clock.
+        Press button below if you would like to begin.
+      </p>
       <div>
-        <button class="back-btn">
-          Go Back
-        </button>
-        <button class="reset-btn">
-          Clear Highscores
+        <button id="start-btn">
+          Start Quiz
         </button>
       </div>
     </div>
-  </div>
+
+    <div class="container display-none" id ="question-container">
+      <div class="quiz">
+        <h1 id="question">Question placeholder</h1>
+        <div id="answer-btn">
+          <button class="btn" id="answer-one" data-correct>Answer 1</button>
+          <button class="btn" id="answer-two" data-correct>Answer 2</button>
+          <button class="btn" id="answer-three" data-correct>Answer 3</button>
+          <button class="btn" id="answer-four" data-correct>Answer 4</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-container display-none" id = "user-score-container">
+      <h1>
+        All Done!
+      </h1>
+      <div>
+        Score:<span id="user-score"> 0</span></div>
+      <div>
+        <label for="initials"></label>
+        <textarea name="initials-container" id="user-initials"></textarea>
+        <button id="initial-submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="highscore-container display-none" id = "highscore-list">
+      <div>
+        <textarea  
+        readonly 
+        id="highscores"
+        placeholder="Highscores">
+        </textarea>
+        <div>
+          <button class="back-btn">
+            Go Back
+          </button>
+          <button class="reset-btn">
+            Clear Highscores
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>  
 
   <script src="assets/script.js"></script>
   
