@@ -11,8 +11,8 @@
 
   <nav>View Highscores</nav>
 
-  <div>
-    <span id ="timer">60</span>
+  <div class="display-none" id ="timer">
+    <span id="game-timer"></span>
   </div>
 
   <main>
@@ -62,11 +62,14 @@
 
     <div class="highscore-container display-none" id = "highscore-list">
       <div>
-        <textarea  
-        readonly 
-        id="highscores"
-        placeholder="Highscores">
-        </textarea>
+        <div>
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
         <div>
           <button class="back-btn">
             Go Back
