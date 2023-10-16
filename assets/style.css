@@ -48,10 +48,23 @@ body {
 
 #answer-btn .btn {
   margin: 5px;
+  padding: 5px;
   background-color: rgb(109, 4, 109);
   color: white;
   font-size: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+ display: block;
+}
+
+.display-inline {
+  display: inline;
 }

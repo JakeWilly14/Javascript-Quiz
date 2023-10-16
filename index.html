@@ -11,9 +11,13 @@
 
   <nav>View Highscores</nav>
 
+  <div>
+    <span id ="timer">60</span>
+  </div>
+
   <main>
 
-    <div class="header-card">
+    <div class="header-card" id="header-start">
       <h1>
         Coding Quiz Challenge
       </h1>
@@ -31,19 +35,19 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container display-none" id ="question-container">
       <div class="quiz">
         <h1 id="question">Question placeholder</h1>
         <div id="answer-btn">
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 2</button>
-          <button class="btn">Answer 3</button>
-          <button class="btn">Answer 4</button>
+          <button class="btn" id="answer-one" data-correct>Answer 1</button>
+          <button class="btn" id="answer-two" data-correct>Answer 2</button>
+          <button class="btn" id="answer-three" data-correct>Answer 3</button>
+          <button class="btn" id="answer-four" data-correct>Answer 4</button>
         </div>
       </div>
     </div>
 
-    <div class="input-container">
+    <div class="input-container display-none" id = "user-score-container">
       <h1>
         All Done!
       </h1>
@@ -52,10 +56,11 @@
       <div>
         <label for="initials"></label>
         <textarea name="initials-container" id="user-initials"></textarea>
+        <button id="initial-submit">Submit</button>
       </div>
     </div>
 
-    <div class="highscore-container">
+    <div class="highscore-container display-none" id = "highscore-list">
       <div>
         <textarea  
         readonly 
@@ -71,6 +76,7 @@
           </button>
         </div>
       </div>
+
     </div>
 
   </main>  

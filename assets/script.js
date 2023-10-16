@@ -55,22 +55,115 @@ var answerButton = document.getElementById("answer-btn");
 var currentQuestionIndex = 0;
 var score = 0;
 
+var answerOne = document.getElementById('answer-one')
+var answerTwo = document.getElementById('answer-two')
+var answerThree = document.getElementById('answer-three')
+var answerFour = document.getElementById('answer-four')
+
+var startPage = document.getElementById('header-start')
+var questionPage = document.getElementById('question-container')
+var userScorePage = document.getElementById('user-score-container')
+var highscorePage = document.getElementById('highscore-list')
+
+var timer
+
 // sets timer with new score, also calling on first question //
 function startQuiz() {
   console.log('started')
   currentQuestionIndex = 0;
   score = 0;
   //Start Timer
+  timer = 60;
+  var myInterval = setInterval(gameClock, 1000);
   showQuestion();
+  
+  function gameClock() {
+    timer--
+    document.getElementById('timer').textContent = timer
+    if (timer <= 0) {
+      clearInterval(myInterval);
+      gameOver();
+    }
+  }
 }
+
 
 // shows question in random order from array //
 function showQuestion() {
-  var currentQuestion = questions[Math.floor(Math.random()*questions.length)]
+  startPage.classList.add('display-none');
+  questionPage.classList.remove('display-none');
+  if (questions.length === 0) {
+    gameOver();
+
+    return;
+  }
+  var index = Math.floor(Math.random()*questions.length)
+  var currentQuestion = questions[index]
+
   var questionNumber = currentQuestionIndex + 1;
     // inputs randomized question in question element in HTML //
     questionEl.innerHTML = questionNumber + ". " + currentQuestion.question;
+    // 
+
+    for (var i = 0; i < 4; i++) {
+      answerButton.children[i].textContent = currentQuestion.answers[i].text;
+      answerButton.children[i].dataset.correct = currentQuestion.answers[i].correct;
+    }
+  
+    var questionAnswered = questions.splice(index, 1) 
+  }
+
+function gameOver() {
+  questionPage.classList.add('display-none')
+  userScorePage.classList.remove('display-none')
+  }
+
+function displayHighscore() {
+  userScorePage.classList.add('display-none')
+  highscorePage.classList.remove('display-none')
 }
 
-
 startButton.addEventListener("click", startQuiz);
+
+answerOne.addEventListener("click", (e) => {
+  console.log(e.target.dataset.correct)
+  if (e.target.dataset.correct === 'true') {
+    score++;
+    } else {
+      timer = timer - 15;
+    } 
+    console.log(score)
+    showQuestion();
+});
+answerTwo.addEventListener("click", (e) => {
+  console.log(e.target.dataset.correct)
+  if (e.target.dataset.correct === 'true') {
+    score++;
+    } else {
+      timer = timer - 15;
+    } 
+    console.log(score)
+    showQuestion();
+});
+answerThree.addEventListener("click", (e) => {
+  console.log(e.target.dataset.correct)
+  if (e.target.dataset.correct === 'true') {
+    score++;
+    } else {
+      timer = timer - 15;
+    } 
+    console.log(score)
+    showQuestion();
+});
+answerFour.addEventListener("click", (e) => {
+  console.log(e.target.dataset.correct)
+  if (e.target.dataset.correct === 'true') {
+    score++;
+    } else {
+      timer = timer - 15;
+    } 
+    console.log(score)
+    showQuestion();
+});
+
+document.getElementById('initial-submit').addEventListener('click', displayHighscore)
