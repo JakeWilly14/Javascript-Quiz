@@ -72,6 +72,7 @@ var timer = document.getElementById('timer')
 var endGame = false;
 var scoreRank = []
 
+document.getElementById('highscore-nav').classList.remove('display-none')
 
 // sets timer with new score, also calling on first question 
 function startQuiz() {
@@ -125,6 +126,8 @@ function gameOver() {
   document.getElementById('timer').classList.add('display-none')
   questionPage.classList.add('display-none');
   userScorePage.classList.remove('display-none');
+  document.getElementById('highscore-nav').classList.add('display-none');
+
 
   var timerScore = 0;
   
@@ -195,10 +198,12 @@ function gameOver() {
   }
 
 function displayHighscore(initials) {
-  userScorePage.classList.add('display-none')
-  highscorePage.classList.remove('display-none')
+  userScorePage.classList.add('display-none');
+  highscorePage.classList.remove('display-none');
+  document.getElementById('highscore-nav').classList.add('display-none')
+  
 
-  var userScore = {name: initials, totalScore: score}
+  var userScore = {name: initials, totalScore: score};
   
   if (scoreRank.length === 0) {
     scoreRank.push(userScore)

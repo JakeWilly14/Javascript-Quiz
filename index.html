@@ -9,13 +9,13 @@
 
 <body>
 
-  <nav>View Highscores</nav>
+  <nav class="display-none" id="highscore-nav">View Highscores</nav>
 
   <div class="display-none" id ="timer">
     <span id="game-timer"></span>
   </div>
 
-  <main>
+  <main class="container">
 
     <div class="header-card" id="header-start">
       <h1>
@@ -29,13 +29,13 @@
         Press button below if you would like to begin.
       </p>
       <div>
-        <button id="start-btn">
+        <button class="btn" id="start-btn">
           Start Quiz
         </button>
       </div>
     </div>
 
-    <div class="container display-none" id ="question-container">
+    <div class="display-none" id ="question-container">
       <div class="quiz">
         <h1 id="question">Question placeholder</h1>
         <div id="answer-btn">
@@ -60,7 +60,7 @@
       <div>
         <label for="initials"></label>
         <textarea name="initials-container" id="user-initials"></textarea>
-        <button id="initial-submit">Submit</button>
+        <button class ="btn" id="initial-submit">Submit</button>
       </div>
     </div>
 
@@ -70,10 +70,10 @@
           <ol class="user-score-list" id="highscore-rank"></ol>
         </div>
         <div>
-          <button class="back-btn" id="go-back-btn">
+          <button class="back-btn btn" id="go-back-btn">
             Go Back
           </button>
-          <button class="reset-btn" id="reset-highscores">
+          <button class="reset-btn btn" id="reset-highscores">
             Clear Highscores
           </button>
         </div>
