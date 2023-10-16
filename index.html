@@ -52,7 +52,11 @@
         All Done!
       </h1>
       <div>
-        Score:<span id="user-score"> 0</span></div>
+        Score: <span id="user-score">0</span>
+      </div>
+      <div>
+        Time Left: <span id ="user-time-left">0</span>
+      </div>
       <div>
         <label for="initials"></label>
         <textarea name="initials-container" id="user-initials"></textarea>
@@ -63,18 +67,13 @@
     <div class="highscore-container display-none" id = "highscore-list">
       <div>
         <div>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+          <ol class="user-score-list" id="highscore-rank"></ol>
         </div>
         <div>
-          <button class="back-btn">
+          <button class="back-btn" id="go-back-btn">
             Go Back
           </button>
-          <button class="reset-btn">
+          <button class="reset-btn" id="reset-highscores">
             Clear Highscores
           </button>
         </div>
