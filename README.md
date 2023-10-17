@@ -11,7 +11,7 @@ In this version the code could still be improved but it is the beginning to unde
 
 ## Installation
 
-Url deployment here.
+https://jakewilly14.github.io/javascript-quiz/
 
 ## Usage
 
