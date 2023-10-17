@@ -69,13 +69,13 @@ body {
 
 #user-score-container {
   padding: 0 10%;
-  margin-top: 25%;
+  margin: 200px 0 75px;
   line-height: 25px;
 }
 
 #highscore-list {
   padding: 0 10%;
-  margin-top: 50%;
+  margin: 200px 0 75px;
 }
 
 #highscore-rank {

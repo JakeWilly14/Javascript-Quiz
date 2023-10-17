@@ -197,10 +197,9 @@ function gameOver() {
       ],
     },
   ];
-  // write code to enter users initials here in text area here
 }
 
-function displayHighscore(initials) {
+function displayHighscore() {
   userScorePage.classList.add("display-none");
   highscorePage.classList.remove("display-none");
   document.getElementById("highscore-nav").classList.add("display-none");
@@ -209,7 +208,6 @@ function displayHighscore(initials) {
   console.log(userScore);
   if (scoreRank.length === 0) {
     scoreRank.push(userScore);
-    console.log(scoreRank);
   }
   for (var i = 0; i < scoreRank.length; i++) {
     if (userScore.totalScore > scoreRank[i].totalScore) {
@@ -282,7 +280,6 @@ document.getElementById("initial-submit").addEventListener("click", () => {
     initials: userInitials,
     score: score,
   };
-  console.log(scoreObject);
   localStorage.setItem("score", JSON.stringify(scoreObject));
   displayHighscore();
 });
